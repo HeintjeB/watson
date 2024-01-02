@@ -1,0 +1,93 @@
+/* Base table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif; /* Easy to read font */
+  color: white; /* White font color */
+}
+
+/* Header styles */
+th {
+  background-color: #001f3f; /* Darker than navy blue */
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Row styles */
+tr {
+  background-color: #004080; /* Navy blue */
+}
+
+tr:nth-child(even) {
+  background-color: #003366; /* Slightly lighter than navy blue */
+}
+
+/* Cell styles */
+td {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+
+body {
+  background-color: #001f3f;
+}
+
+h4 {
+  color: #FFFFFF;
+  font-style: italic;
+  font-family: monospace;
+
+}
+
+h1 {
+  color: #FFFFFF;
+  font-style: italic;
+  font-family: monospace;
+  margin-bottom: 5px;
+
+}
+
+.dropbtn{
+  background-color: #004080;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: #000000;
+}
+
+.stopbtn{
+  background-color: rgba(255, 0, 0, 0.534);
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-top: 15px;
+  padding: 10px;
+
+}
+
+a {
+  text-decoration: underline;
+  color: #FFFFFF;
+  font-style: italic;
+  font-family: monospace;
+
+}
+
+.line {
+  width: 800px;
+  margin: 0;
+}
+
+.select_dataframe {
+  color: #FFFFFF;
+  font-style: italic;
+  font-family: monospace;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
