@@ -6,11 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "watson"
 version = "0.0.1"
 authors = [
-  { name="Hein Burgmans", website="cobra-ms.com"},
+  { name="Hein Burgmans", website="heinburgmans.com"},
 ]
-description = "A small example package"
+description = "Look into the data of your DataFrames with Watson Explorer"
 readme = "README.md"
-requires-python = ">=3.5"
+requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -18,5 +18,5 @@ classifiers = [
 ]
  
 [project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+"Homepage" = "https://github.com/HeintjeB/watson"
+"Bug Tracker" = "https://github.com/HeintjeB/watson/issues"
