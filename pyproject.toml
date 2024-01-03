@@ -1,16 +1,21 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", pandas>=]
 build-backend = "setuptools.build_meta"
  
 [project]
-name = "watson"
-version = "0.0.1"
+name = "Watson"
+version = "1.0.0"
+dependencies = [
+    "pandas==2.1.4"]
+requires-python = ">=3.8"
 authors = [
-  { name="Hein Burgmans", website="heinburgmans.com"},
+  { name="Hein Burgmans", email="heinburgmans@gmail.com" },
 ]
 description = "Look into the data of your DataFrames with Watson Explorer"
 readme = "README.md"
-requires-python = ">=3.11"
+license = {file = "LICENSE.txt"}
+keywords = ["pandas", "explorer", "watson"]
+
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -18,5 +23,7 @@ classifiers = [
 ]
  
 [project.urls]
-"Homepage" = "https://github.com/HeintjeB/watson"
+"Repository" = "https://github.com/HeintjeB/watson"
 "Bug Tracker" = "https://github.com/HeintjeB/watson/issues"
+"Homepage" = "cobra-ms.com"
+Changelog = "https://github.com/HeintjeB/watson/main/CHANGELOG.md"

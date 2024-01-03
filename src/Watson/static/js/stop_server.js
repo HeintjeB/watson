@@ -2,7 +2,7 @@ document.getElementById('stopButton').addEventListener('click', function() {
     fetch('/stop')
         .then(response => response.text())
         .then(data => {
-            alert(data);
+            alert("The server stopped. Please click on 'OK'");
             try {
                 window.close(); 
             } catch (e) {

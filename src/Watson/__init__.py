@@ -3,16 +3,16 @@ import os
 from pathlib import Path
 import shutil
 import inspect
-from localhost import LocalHost
+from .localhost import LocalHost
 
 class VariableDefinitions():
     def __init__(self):
         base_dir = Path(__file__).resolve().parent
-        self.html_folder = os.path.join(base_dir,'static\html')
+        self.html_folder = os.path.join(base_dir,'static/html')
         self.length_of_html_folder = [f for f in os.listdir(self.html_folder) if os.path.isfile(os.path.join(self.html_folder, f))]
-        self.main_html_path = os.path.join(base_dir,'static\html\main.html')
+        self.main_html_path = os.path.join(base_dir,'static/html/main.html')
         
-class Watson(VariableDefinitions):
+class Explorer(VariableDefinitions):
     def __init__(self, namespace=None):
         super().__init__()
         self.dataframe_dictionary = None
@@ -38,7 +38,7 @@ class Watson(VariableDefinitions):
             self.dataframe_dictionary = {name: obj for name, obj in namespace.items() if isinstance(obj, pd.DataFrame)}
             for name in self.dataframe_dictionary:
                 self.dataframe_dictionary[name].to_html(buf=os.path.join(self.html_folder,'{}.html'.format(name)))
-        return self.dataframes
+        return self.dataframe_dictionary
 
     def create_main_html(self):
         if len(self.dataframe_dictionary) > 0:
@@ -46,7 +46,7 @@ class Watson(VariableDefinitions):
             <!DOCTYPE html>
                 <head>
                     <title>Watson Explorer</title>
-                    <link rel="stylesheet" href="..\css\main.css">
+                    <link rel="stylesheet" href="../css/main.css">
                 </head>
                 <body>
                     <table>
@@ -60,18 +60,17 @@ class Watson(VariableDefinitions):
                                 </td>
                             </tr>
                         </table>
-                    <h2 class="select_dataframe">Select your DataFrame:</h2>            
+                    <h2 class="select_dataframe">Select your DataFrame: kak!</h2>            
                     <select name='myDropdown' id='myDropdown' class='dropbtn'>
             """
-            options = '\n'.join([f"<option value='{name}.html'>{name}</option>" for name in self.dataframes['Name']])
+            options = '\n'.join([f"<option value='{name}.html'>{name}</option>" for name in self.dataframe_dictionary])
             html_end = """
                     </select>
                     <br>
                     <div id="dataframe-container"></div>
-                    <button id="stopButton">Stop Server</button>
                     <h4>Created by Cobra Micro-Solutions</h4>
-                    <script src="..\js\stop_server.js"></script>
-                    <script src="..\js\include.js"></script>
+                    <script src="../js/stop_server.js"></script>
+                    <script src="../js/include.js"></script>
                 </body>
             </html>
             """
