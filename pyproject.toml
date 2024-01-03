@@ -26,4 +26,4 @@ classifiers = [
 "Repository" = "https://github.com/HeintjeB/watson"
 "Bug Tracker" = "https://github.com/HeintjeB/watson/issues"
 "Homepage" = "cobra-ms.com"
-Changelog = "https://github.com/HeintjeB/watson/main/CHANGELOG.md"
+Changelog = "https://github.com/HeintjeB/watson/blob/main/CHANGELOG.md"
