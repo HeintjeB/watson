@@ -26,7 +26,26 @@ You can access the DataFrames using the dropdown menu. To stop the local host, c
 """
 
 """REMARK:
-It will not extract a dataframe out of a function, it alsways need a
+It is not possible to view data from dataframes that are not linked to variables.
+For example:
+"""
+
+example_dict = {'A' : [1,2,3,4], 'B' : [5,6,7,8]}
+
+class Example():
+    def __init__(self, dictionary=None):
+        self.dataframe = pd.DataFrame(example_dict)
+    
+    def return_df_1(self):
+        return self.dataframe
+    
+    def return_df_2(self):
+        self.dataframe2 = self.dataframe.assign(D='Test')
+        return self.dataframe2
+
+example = Example(example_dict)
+example.return_df_1() # The explorer will not include this dataframe.
+example_df = example.return_df_2() # The explorer will include this dataframe.
 
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
