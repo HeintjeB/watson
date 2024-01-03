@@ -91,3 +91,18 @@ a {
   margin-bottom: 5px;
   margin-left: 5px;
 }
+
+.low-value {
+  background-color: #F44336; /* Red for low values */
+  color: white;
+}
+
+.medium-value {
+  background-color: #FFEB3B; /* Yellow for medium values */
+  color: black;
+}
+
+.high-value {
+  background-color: #4CAF50; /* Green for high values */
+  color: white;
+}
