@@ -74,3 +74,8 @@ Contact: heinburgmans.com <br>
 Project Link: https://github.com/HeintjeB/watson
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+The creation of this explorer was inspired by Spyder's Variable Explorer.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
