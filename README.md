@@ -18,7 +18,7 @@ pip install watson
 from Watson import Explorer
 
 """Place the following statement at the end of your Python file."""
-watson = Explorer()
+Explorer()
 
 """
 After running the script, it will extract all the dataframes from the file, delete all old HTML files, create new HTML files, and open a local host to display the DataFrames. 
@@ -47,6 +47,9 @@ example = Example(example_dict)
 example.return_df_1() # The explorer will not include this dataframe.
 example_df = example.return_df_2() # The explorer will include this dataframe.
 
+"""REMARK 2:
+This library is not designed to load more than 20,000 rows (yet). We suggest using .head() to reduce the size of your dataframe before using this library.
+"""
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

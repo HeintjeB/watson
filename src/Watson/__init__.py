@@ -1,4 +1,5 @@
 import pandas as pd
+import polars as pl
 import os
 from pathlib import Path
 import shutil
@@ -62,18 +63,25 @@ class Explorer(VariableDefinitions):
             LocalHost.run_server()
     
     def delete_all_temp_htmls(self):
-        if self.length_of_html_folder > 0:
-            shutil.rmtree(self.html_folder)
-        else:
-            print('Temp files was empty!')
+        for filename in os.listdir(self.html_folder):
+            file_path = os.path.join(self.html_folder, filename)
+            try:
+                if os.path.isfile(file_path) or os.path.islink(file_path):
+                    os.unlink(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            except Exception as e:
+                print('Failed to delete %s. Reason: %s' % (file_path, e))
 
     def find_all_dataframes(self, namespace):
         if namespace==None:
             print('No namespace is found!')
         else:  
-            self.dataframe_dictionary = {name: obj for name, obj in namespace.items() if isinstance(obj, pd.DataFrame)}
+            dataframe_dictionary_pandas = {name: obj for name, obj in namespace.items() if isinstance(obj, pd.DataFrame)}
+            dataframe_dictionary_polars = {name: obj.to_pandas() for name, obj in namespace.items() if isinstance(obj, pl.DataFrame)}
+            self.dataframe_dictionary = {**dataframe_dictionary_pandas, **dataframe_dictionary_polars}
             for name in self.dataframe_dictionary:
-                self.dataframe_dictionary[name].to_html(buf=os.path.join(self.html_folder,'{}.html'.format(name)))
+                    self.dataframe_dictionary[name].to_html(os.path.join(self.html_folder,'{}.html'.format(name)))
         return self.dataframe_dictionary
 
     def generate_json_files(self):
