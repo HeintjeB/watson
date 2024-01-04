@@ -4,7 +4,8 @@ function loadDataFrame() {
     .then(response => response.text())
     .then(data => {
         document.getElementById('dataframe-container').innerHTML = data;
-        colorNumericColumns(); // Call this after setting the innerHTML
+        const dataframeName = selectedFile.split('.')[0];
+        colorNumericColumns(dataframeName);
     });
 }
 

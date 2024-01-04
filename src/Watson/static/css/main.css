@@ -93,16 +93,16 @@ a {
 }
 
 .low-value {
-  background-color: #F44336; /* Red for low values */
+  background-color: #ff009d; /* Red for low values */
   color: white;
 }
 
 .medium-value {
-  background-color: #FFEB3B; /* Yellow for medium values */
-  color: black;
+  background-color: #d400ff; /* Yellow for medium values */
+  color: white;
 }
 
 .high-value {
-  background-color: #4CAF50; /* Green for high values */
+  background-color: #124cec; /* Green for high values */
   color: white;
 }
