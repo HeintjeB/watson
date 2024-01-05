@@ -5,7 +5,7 @@ import webbrowser
 import os
 from pathlib import Path
 
-PORT = 8000
+PORT = 8080
 DIRECTORY = Path(__file__).resolve().parent
 
 class LocalHost(http.server.SimpleHTTPRequestHandler):

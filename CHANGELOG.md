@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.2
+
+### Added or Changed
+- Added the possibility to view pandas Series.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## v1.0.1
 
 ### Added or Changed
@@ -8,8 +16,6 @@
 - Visual scrolling added.
 - A few other minor changes made.
 
-### Removed
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -17,7 +23,5 @@
 
 ### Added or Changed
 - Created Watson Explorer
-
-### Removed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

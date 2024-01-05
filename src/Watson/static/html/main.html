@@ -1,0 +1,34 @@
+
+            <!DOCTYPE html>
+                <head>
+                    <title>Watson Explorer</title>
+                    <link rel="stylesheet" href="../css/main.css">
+                </head>
+                <body>
+                    <table>
+                            <tr>
+                                <td>
+                                    <h1>Watson Explorer</h1>
+                                    <hr class="line">
+                                </td>
+                                <td>
+                                    <button class='stopbtn' id="stopButton">Stop Server</button>
+                                </td>
+                            </tr>
+                        </table>
+                    <h2 class="select_dataframe">Select your DataFrame:</h2>            
+                    <select name='myDropdown' id='myDropdown' class='dropbtn'>
+            <option value='realized_hours_per_machine_week.html'>realized_hours_per_machine_week</option>
+<option value='calculated_hours_per_machine_week.html'>calculated_hours_per_machine_week</option>
+<option value='total_hours_per_machine_week.html'>total_hours_per_machine_week</option>
+                </select>
+                <br>
+                <div id="dataframe-container"></div>
+                <h4>Created by Cobra Micro-Solutions</h4>
+                <script src="../js/stop_server.js"></script>
+                <script src="../js/include.js"></script>
+                <script src="../js/coloring_int_columns.js"></script>
+                <script>var columnDataTypes = {"realized_hours_per_machine_week": {"bwrk_num": "float64", "Week": "object", "vc_hours_realized": "float64"}, "calculated_hours_per_machine_week": {"bwrk_num": "float64", "Week": "object", "nc_hours_realized": "float64"}, "total_hours_per_machine_week": {"bwrk_num": "float64", "Week": "object", "vc_hours_realized": "float64", "nc_hours_realized": "float64"}};</script>
+            </body>
+        </html>
+        

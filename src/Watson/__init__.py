@@ -78,8 +78,10 @@ class Explorer(VariableDefinitions):
             print('No namespace is found!')
         else:  
             dataframe_dictionary_pandas = {name: obj for name, obj in namespace.items() if isinstance(obj, pd.DataFrame)}
+            dataframe_dictionary_series = {name: obj.reset_index() for name, obj in namespace.items() if isinstance(obj, pd.Series)}
             dataframe_dictionary_polars = {name: obj.to_pandas() for name, obj in namespace.items() if isinstance(obj, pl.DataFrame)}
-            self.dataframe_dictionary = {**dataframe_dictionary_pandas, **dataframe_dictionary_polars}
+
+            self.dataframe_dictionary = {**dataframe_dictionary_pandas, **dataframe_dictionary_polars, **dataframe_dictionary_series}
             for name in self.dataframe_dictionary:
                     self.dataframe_dictionary[name].to_html(os.path.join(self.html_folder,'{}.html'.format(name)))
         return self.dataframe_dictionary
