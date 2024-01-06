@@ -4,6 +4,7 @@
 
 ### Added or Changed
 - Added the possibility to view pandas Series.
+- Solved some minor issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

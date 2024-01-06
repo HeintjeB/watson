@@ -6,6 +6,7 @@ import shutil
 import inspect
 import json
 from .localhost import LocalHost
+from glob import glob
 
 class VariableDefinitions():
     def __init__(self):
@@ -55,25 +56,19 @@ class Explorer(VariableDefinitions):
         if namespace is None:
             caller_frame = inspect.currentframe().f_back
             namespace = caller_frame.f_globals
-        self.delete_all_temp_htmls
-        self.find_all_dataframes(namespace)
-        if self.dataframe_dictionary != None:
+        self.delete_all_temp_htmls()
+        self.retrieve_all_dataframes(namespace)
+        if self.dataframe_dictionary is not None:
             self.generate_json_files()
             self.create_main_html()
             LocalHost.run_server()
     
     def delete_all_temp_htmls(self):
-        for filename in os.listdir(self.html_folder):
-            file_path = os.path.join(self.html_folder, filename)
-            try:
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-            except Exception as e:
-                print('Failed to delete %s. Reason: %s' % (file_path, e))
-
-    def find_all_dataframes(self, namespace):
+        html_files = glob(f'{self.html_folder}/*.html', recursive=True)
+        for file in html_files:
+            os.remove(file)
+            
+    def retrieve_all_dataframes(self, namespace):
         if namespace==None:
             print('No namespace is found!')
         else:  
