@@ -1,13 +1,13 @@
-# Watson
+# Watson Explorer
 
 Explore the data in your Pandas DataFrames using Watson Explorer.
 
 ## Installation
 
-Use the package manager [pip](https://pip.Heintjeb.io/en/stable/) to install watson.
+Use the package manager [pip](https://pypi.org/project/Watson-Explorer/) to install Watson-Explorer.
 
 ```bash
-pip install watson
+pip install Watson-Explorer
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -15,7 +15,7 @@ pip install watson
 ## Usage
 
 ```python
-from Watson import Explorer
+from Watson-Explorer import Explorer
 
 """Place the following statement at the end of your Python file."""
 Explorer()
@@ -73,7 +73,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
-Contact: heinburgmans.com <br>
+Contact: https://heinburgmans.com <br>
 Project Link: https://github.com/HeintjeB/watson
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

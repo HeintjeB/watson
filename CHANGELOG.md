@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.3
+- Changed the name of the package to Watson-Explorer
+
 ## v1.0.2
 
 ### Added or Changed
