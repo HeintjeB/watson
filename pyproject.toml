@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "Watson-Explorer"
-version = "1.0.3"
+name = "WatsonExplorer"
+version = "1.0.4"
 dependencies = [
     "pandas==2.1.4",
     "polars==0.20.3"

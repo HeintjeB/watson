@@ -4,10 +4,10 @@ Explore the data in your Pandas DataFrames using Watson Explorer.
 
 ## Installation
 
-Use the package manager [pip](https://pypi.org/project/Watson-Explorer/) to install Watson-Explorer.
+Use the package manager [pip](https://pypi.org/project/Watson Explorer/) to install Watson Explorer.
 
 ```bash
-pip install Watson-Explorer
+pip install WatsonExplorer
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -15,7 +15,7 @@ pip install Watson-Explorer
 ## Usage
 
 ```python
-from Watson-Explorer import Explorer
+from WatsonExplorer import Explorer
 
 """Place the following statement at the end of your Python file."""
 Explorer()
