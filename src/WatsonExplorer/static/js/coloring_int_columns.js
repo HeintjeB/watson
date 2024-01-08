@@ -39,12 +39,23 @@ function applyColorCoding(rows, colIndex) {
         var percentile = (value - minVal) / range;
 
         // Apply the color based on the percentile
-        if (percentile < 0.33) {
+        if (percentile < 0.125) {
+            cell.className = 'very-low-value';
+        } else if (percentile < 0.25) {
             cell.className = 'low-value';
-        } else if (percentile < 0.67) {
-            cell.className = 'medium-value';
-        } else {
+        } else if (percentile < 0.375) {
+            cell.className = 'somewhat-low-value';
+        } else if (percentile < 0.5) {
+            cell.className = 'below-average-value';
+        } else if (percentile < 0.625) {
+            cell.className = 'average-value';
+        } else if (percentile < 0.75) {
+            cell.className = 'above-average-value';
+        } else if (percentile < 0.875) {
             cell.className = 'high-value';
-        }
+        } else {
+            cell.className = 'very-high-value';
+        }        
     });
+
 }

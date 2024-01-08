@@ -92,17 +92,43 @@ a {
   margin-left: 5px;
 }
 
-.low-value {
-  background-color: #ff009d; /* Red for low values */
+
+.very-low-value {
+  background-color: #FFC0E4; /* Red for low values */
   color: white;
 }
 
-.medium-value {
-  background-color: #d400ff; /* Yellow for medium values */
+.low-value {
+  background-color: #FF8DC2; /* Yellow for medium values */
+  color: white;
+}
+
+.somewhat-low-value {
+  background-color: #FF5E98; /* Green for high values */
+  color: white;
+}
+
+.below-average-value {
+  background-color: #FF3267; /* Green for high values */
+  color: white;
+}
+
+.average-value {
+  background-color: #CE2680; /* Green for high values */
+  color: white;
+}
+
+.above-average-value {
+  background-color: #9D1B86; /* Green for high values */
   color: white;
 }
 
 .high-value {
-  background-color: #124cec; /* Green for high values */
+  background-color: #69126C; /* Green for high values */
+  color: white;
+}
+
+.very-high-value {
+  background-color: #2B093B; /* Green for high values */
   color: white;
 }
