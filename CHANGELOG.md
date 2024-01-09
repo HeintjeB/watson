@@ -3,13 +3,13 @@
 ## v2.0.0
 
 ### Added or Changed
-- Integrated DataTables into Watson Explorer. This results in:
-  - Possibility to sort tables.
-  - Search in the tables.
-  - Divide the tables into pages.
-  - Implemented new CSS stylesheet (inherinet from DataTables).
-- Added a wider colorscale (from 3 to 8 colors).
-- Added the header <i>Index</i> to the first column.
+Integrated DataTables into Watson Explorer, which resulted in:
+- The possibility to sort tables.
+- The ability to search within the tables.
+- Pagination of tables.
+- Implementation of a new CSS stylesheet, inherited from DataTables.
+Added a wider color scale (from 3 to 8 colors).
+Added the header <i>Index</i> to the first column.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

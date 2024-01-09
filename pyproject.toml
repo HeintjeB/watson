@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "WatsonExplorer"
-version = "1.0.4"
+version = "2.0.0"
 dependencies = [
     "pandas==2.1.4",
     "polars==0.20.3"

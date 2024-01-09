@@ -4,7 +4,7 @@ Explore the data in your Pandas DataFrames using Watson Explorer.
 
 ## Installation
 
-Use the package manager [pip](https://pypi.org/project/Watson Explorer/) to install Watson Explorer.
+Use the package manager [pip](https://pypi.org/project/WatsonExplorer/) to install Watson Explorer.
 
 ```bash
 pip install WatsonExplorer
@@ -48,7 +48,7 @@ example.return_df_1() # The explorer will not include this dataframe.
 example_df = example.return_df_2() # The explorer will include this dataframe.
 
 """REMARK 2:
-This library is not designed to load more than 20,000 rows (yet). We suggest using .head() to reduce the size of your dataframe before using this library.
+This library is not designed to load more than 20,000 rows (yet). We recommend using .head() to reduce the size of your dataframe before using this library.
 """
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -80,5 +80,6 @@ Project Link: https://github.com/HeintjeB/watson
 
 ## Acknowledgments
 The creation of this explorer was inspired by Spyder's Variable Explorer.
+Shout-out to DataTables.net whose code heavily improved this library!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -32,12 +32,12 @@ class VariableDefinitions():
                                 </td>
                             </tr>
                         </table>
-                    <h2 class="select_dataframe">Select your DataFrame:</h2>            
-                    <select name='myDropdown' id='myDropdown' class='dropbtn'>
+                    <div class="select_dataframe"><h2>Select DataFrame:</h2><select name='myDropdown' id='myDropdown' class='dropbtn'>   
+                    
             """
         self. html_body = """
                 </select>
-                <br>
+                </div>
                 <div id="dataframe-container"></div>
                 <h4>Created by Cobra Micro-Solutions</h4>
                 <script src="../js/jquery-3.7.0.min.js"></script>
@@ -82,7 +82,7 @@ class Explorer(VariableDefinitions):
 
             for name in self.dataframe_dictionary:
                 html_file_path = os.path.join(self.html_folder,'{}.html'.format(name))
-                self.dataframe_dictionary[name].to_html(html_file_path)
+                self.dataframe_dictionary[name].to_html(html_file_path, table_id='dataframe_id')
                 # html_column_dict = {index: column for index, column in enumerate(self.dataframe_dictionary[name].columns)}
                 with open(html_file_path, 'r', encoding='utf-8') as file:
                     html_content = file.read()

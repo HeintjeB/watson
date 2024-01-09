@@ -11,7 +11,6 @@ td {
   white-space: nowrap;
 }
 
-
 body {
   background-color: #001f3f;
 }
@@ -39,17 +38,17 @@ h1 {
 
 }
 
-
 .dropbtn{
   background-color: #004080;
   color: #FFFFFF;
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 10px;
   margin-bottom: 15px;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 10px;
   border-color: #000000;
+  /* margin-left: 10px; */
 }
 
 .stopbtn{
@@ -76,13 +75,27 @@ a {
 }
 
 .select_dataframe {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Vertical alignment */
+  float: left; /* Keeps the container floated to the left */
+}
+
+.select_dataframe h2 {
+  margin-right: 10px; /* Space between the heading and dropdown */
+  color: #FFFFFF; /* Text color for the heading */
+}
+
+.select_dataframe select {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #004080;
+  padding: 7px;
+  font-size: 12px;
   color: #FFFFFF;
   font-style: italic;
   font-family: monospace;
-  margin-bottom: 5px;
-  margin-left: 5px;
+  margin-bottom: 1px; /* Adjust as needed */
 }
-
 
 .very-low-value {
   background-color: #FFC0E4; /* Red for low values */
