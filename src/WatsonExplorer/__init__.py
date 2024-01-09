@@ -78,7 +78,17 @@ class Explorer(VariableDefinitions):
 
             self.dataframe_dictionary = {**dataframe_dictionary_pandas, **dataframe_dictionary_polars, **dataframe_dictionary_series}
             for name in self.dataframe_dictionary:
-                    self.dataframe_dictionary[name].to_html(os.path.join(self.html_folder,'{}.html'.format(name)))
+                    html_file_path =os.path.join(self.html_folder,'{}.html'.format(name))
+                    self.dataframe_dictionary[name].to_html(html_file_path)
+                    html_column_dict = {index: column for index, column in enumerate(self.dataframe_dictionary[name].columns)}
+
+                    with open(html_file_path, 'r', encoding='utf-8') as file:
+                        html_content = file.read()
+                    html_content = html_content.replace('<th></th>', '<th onclick="sortTable(0)">Index</th>')
+                    for index in html_column_dict:
+                        html_content = html_content.replace(f'>{html_column_dict[index]}', f' onclick="sortTable({index+1})">{html_column_dict[index]}')
+                    with open(html_file_path, 'w', encoding='utf-8') as file:
+                        file.write(html_content)
         return self.dataframe_dictionary
 
     def generate_json_files(self):
