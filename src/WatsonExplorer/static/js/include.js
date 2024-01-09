@@ -6,6 +6,12 @@ function loadDataFrame() {
         document.getElementById('dataframe-container').innerHTML = data;
         const dataframeName = selectedFile.split('.')[0];
         colorNumericColumns(dataframeName);
+
+        // Reinitialize DataTables here
+        $('#dataframe_id').DataTable({
+        // Your DataTables configuration
+        });
+
     });
 }
 

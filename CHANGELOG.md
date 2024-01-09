@@ -1,10 +1,31 @@
 # Changelog
 
+## v2.0.0
+
+### Added or Changed
+- Integrated DataTables into Watson Explorer. This results in:
+  - Possibility to sort tables.
+  - Search in the tables.
+  - Divide the tables into pages.
+  - Implemented new CSS stylesheet (inherinet from DataTables).
+- Added a wider colorscale (from 3 to 8 colors).
+- Added the header <i>Index</i> to the first column.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## v1.0.4
+
+### Added or Changed
 - Changed the name of the package to WatsonExplorer
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## v1.0.3
+
+### Added or Changed
 - Changed the name of the package to Watson-Explorer
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## v1.0.2
 
@@ -13,7 +34,6 @@
 - Solved some minor issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## v1.0.1
 
@@ -24,7 +44,6 @@
 - A few other minor changes made.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## v1.0.0
 

@@ -1,0 +1,35 @@
+
+            <!DOCTYPE html>
+                <head>
+                    <title>Watson Explorer</title>
+                    <link rel="stylesheet" href="../css/main.css">
+                </head>
+                <body>
+                    <table>
+                            <tr>
+                                <td>
+                                    <h1>Watson Explorer</h1>
+                                    <hr class="line">
+                                </td>
+                                <td>
+                                    <button class='stopbtn' id="stopButton">Stop Server</button>
+                                </td>
+                            </tr>
+                        </table>
+                    <h2 class="select_dataframe">Select your DataFrame:</h2>            
+                    <select name='myDropdown' id='myDropdown' class='dropbtn'>
+            <option value='df13.html'>df13</option>
+<option value='df14.html'>df14</option>
+                </select>
+                <br>
+                <div id="dataframe-container"></div>
+                <h4>Created by Cobra Micro-Solutions</h4>
+                <script src="../js/jquery-3.7.0.min.js"></script>
+                <script src="../js/jquery.dataTables.min.js"></script>
+                <script src="../js/stop_server.js"></script>
+                <script src="../js/include.js"></script>
+                <script src="../js/coloring_int_columns.js"></script>
+                <script>var columnDataTypes = {"df13": {"Start_date": "object", "Week": "object", "Bweek": "object", "Product_name": "object", "Operation": "object", "Hours": "int64"}, "df14": {"Start_date": "datetime64[ns]", "Week": "object", "Bweek": "object", "Product_name": "object", "Operation": "object", "Hours": "int64"}};</script>
+            </body>
+        </html>
+        

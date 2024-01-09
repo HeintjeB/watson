@@ -40,6 +40,8 @@ class VariableDefinitions():
                 <br>
                 <div id="dataframe-container"></div>
                 <h4>Created by Cobra Micro-Solutions</h4>
+                <script src="../js/jquery-3.7.0.min.js"></script>
+                <script src="../js/jquery.dataTables.min.js"></script>
                 <script src="../js/stop_server.js"></script>
                 <script src="../js/include.js"></script>
                 <script src="../js/coloring_int_columns.js"></script>
@@ -77,18 +79,16 @@ class Explorer(VariableDefinitions):
             dataframe_dictionary_polars = {name: obj.to_pandas() for name, obj in namespace.items() if isinstance(obj, pl.DataFrame)}
 
             self.dataframe_dictionary = {**dataframe_dictionary_pandas, **dataframe_dictionary_polars, **dataframe_dictionary_series}
-            for name in self.dataframe_dictionary:
-                    html_file_path =os.path.join(self.html_folder,'{}.html'.format(name))
-                    self.dataframe_dictionary[name].to_html(html_file_path)
-                    html_column_dict = {index: column for index, column in enumerate(self.dataframe_dictionary[name].columns)}
 
-                    with open(html_file_path, 'r', encoding='utf-8') as file:
-                        html_content = file.read()
-                    html_content = html_content.replace('<th></th>', '<th onclick="sortTable(0)">Index</th>')
-                    for index in html_column_dict:
-                        html_content = html_content.replace(f'>{html_column_dict[index]}', f' onclick="sortTable({index+1})">{html_column_dict[index]}')
-                    with open(html_file_path, 'w', encoding='utf-8') as file:
-                        file.write(html_content)
+            for name in self.dataframe_dictionary:
+                html_file_path = os.path.join(self.html_folder,'{}.html'.format(name))
+                self.dataframe_dictionary[name].to_html(html_file_path)
+                # html_column_dict = {index: column for index, column in enumerate(self.dataframe_dictionary[name].columns)}
+                with open(html_file_path, 'r', encoding='utf-8') as file:
+                    html_content = file.read()
+                html_content = html_content.replace('<th></th>', '<th>Index</th>')
+                with open(html_file_path, 'w', encoding='utf-8') as file:
+                    file.write(html_content)
         return self.dataframe_dictionary
 
     def generate_json_files(self):
