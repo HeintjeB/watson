@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.1
+
+### Added or Changed
+A few minor changes made.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## v2.0.0
 
 ### Added or Changed
@@ -8,6 +15,7 @@ Integrated DataTables into Watson Explorer, which resulted in:
 - The ability to search within the tables.
 - Pagination of tables.
 - Implementation of a new CSS stylesheet, inherited from DataTables.
+
 Added a wider color scale (from 3 to 8 colors).
 Added the header <i>Index</i> to the first column.
 
