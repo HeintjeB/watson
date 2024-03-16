@@ -1,5 +1,5 @@
 *.pyc
 dist/*
 src/WatsonExplorer.egg-info/*
-*.html
+.html
 src/WatsonExplorer/test.py
